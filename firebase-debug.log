@@ -1,0 +1,29 @@
+[debug] [2020-01-15T17:25:49.769Z] ----------------------------------------------------------------------
+[debug] [2020-01-15T17:25:49.770Z] Command:       /usr/local/Cellar/node/12.12.0/bin/node /usr/local/bin/firebase serve
+[debug] [2020-01-15T17:25:49.770Z] CLI Version:   7.12.0
+[debug] [2020-01-15T17:25:49.770Z] Platform:      darwin
+[debug] [2020-01-15T17:25:49.770Z] Node Version:  v12.12.0
+[debug] [2020-01-15T17:25:49.771Z] Time:          Wed Jan 15 2020 19:25:49 GMT+0200 (Eastern European Standard Time)
+[debug] [2020-01-15T17:25:49.771Z] ----------------------------------------------------------------------
+[debug] [2020-01-15T17:25:49.771Z] 
+[debug] [2020-01-15T17:25:49.776Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-01-15T17:25:49.777Z] > authorizing via signed-in user
+[debug] [2020-01-15T17:25:49.777Z] [iam] checking project alma-sharie for permissions ["firebase.projects.get"]
+[debug] [2020-01-15T17:25:49.779Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2020-01-15T17:25:49.779Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2020-01-15T17:25:49.933Z] <<< HTTP RESPONSE 200
+[debug] [2020-01-15T17:25:49.948Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/alma-sharie:testIamPermissions  
+
+[debug] [2020-01-15T17:25:51.033Z] <<< HTTP RESPONSE 200
+[debug] [2020-01-15T17:25:51.034Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/alma-sharie  
+ 
+[debug] [2020-01-15T17:25:51.340Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from '/Users/martinkiriloff/projects/web/todo-app'...
+[info] 
+[debug] [2020-01-15T17:25:51.344Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/alma-sharie/webApps/-/config  
+ 
+[debug] [2020-01-15T17:25:52.568Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: build
+[info] ✔  hosting: Local server: http://localhost:5000
