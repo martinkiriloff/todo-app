@@ -1,14 +1,29 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import fontawesome from '@fortawesome/fontawesome'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCaretDown } from '@fortawesome/fontawesome-free-solid'
 
 import './styles/header.scss';
 
 class Header extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            active: false
+        };
+    }
+    handleUsernameClick = () => {
+        const { active } = this.state;
+        this.setState({
+            active: !active
+        })
+    }
 
     render() {
+        const { auth } = this.props;
+        const { active } = this.state;
+
+        console.log(this.state);
         return (
             <header>
                 <nav>
@@ -18,12 +33,12 @@ class Header extends Component {
 
                     <ul className="profile">
                         <li>
-                            <a href="#">
-                                Marto
+                            <button type="button" className="button-link" onClick={this.handleUsernameClick}>
+                                { auth.user.email }
                                 <FontAwesomeIcon icon={faCaretDown}/>
-                            </a>
+                            </button>
                         </li>
-                        <ul className="profile-drop-down">
+                        <ul className={active === false ? "profile-drop-down" : "profile-drop-down active"}>
                             <li><a href="#">Settings</a></li>
                             <li><a href="#">Profile</a></li>
                             <li><a href="#">Logout</a></li>
@@ -36,7 +51,10 @@ class Header extends Component {
 }
 
 function mapStateToProps(state) {
-    return {};
+    return {
+        auth: state.auth,
+        showProfileSubmenu: state.showProfileSubmenu
+    };
 }
 
 export default connect(mapStateToProps)(Header);

@@ -20,7 +20,8 @@ class Home extends Component {
 function mapStateToProps(state) {
   return {
     isLoggingOut: state.auth.isLoggingOut,
-    logoutError: state.auth.logoutError
+    logoutError: state.auth.logoutError,
+    auth: state.auth
   };
 }
 export default connect(mapStateToProps)(Home);

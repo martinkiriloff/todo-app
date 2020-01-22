@@ -34,17 +34,22 @@ header {
 
                 .profile-drop-down {
                     position: absolute;
-                    top: 100%;
-                    right: 5%;
+                    top: 120%;
+                    right: 3%;
                     background-color: $primary-green;
                     width: 150px;
-                    padding: 0;
+                    padding: 10px;
                     border: 1px solid #ccc;
+                    display: none;
+
+                    &.active {
+                        display: inline-flex;
+                    }
 
                     li {
                         width: 100%;
                         text-align: center;
-                        margin: 0 auto;
+                        margin: 10px auto;
 
                         a {
                             width: 100%;
@@ -66,5 +71,17 @@ header {
                 }
             }
         }
+    }
+}
+
+.button-link {
+    background: none;
+    border: none;
+    color: #000;
+    font-size: 18px;
+    cursor: pointer;
+
+    &:hover {
+        color: #FFF;
     }
 }
