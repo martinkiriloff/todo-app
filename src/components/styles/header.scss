@@ -1,0 +1,87 @@
+@import './variables.scss';
+
+header {
+    background-color: $primary-green;
+    min-height: 40px;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+
+    nav {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+
+        ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            width: 50%;
+
+            &.menu {
+                justify-content: flex-start;
+            }
+
+            &.profile {
+                position: relative;
+                justify-content: flex-end;
+
+                li {
+                    justify-content: flex-end;
+                    margin-right: 35px;
+                }
+
+                .profile-drop-down {
+                    position: absolute;
+                    top: 120%;
+                    right: 3%;
+                    background-color: $primary-green;
+                    width: 150px;
+                    padding: 10px;
+                    border: 1px solid #ccc;
+                    display: none;
+
+                    &.active {
+                        display: inline-flex;
+                    }
+
+                    li {
+                        width: 100%;
+                        text-align: center;
+                        margin: 10px auto;
+
+                        a {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+
+            li {
+                display: inline-flex;
+
+                a {
+                    text-decoration: none;
+                    color: #000;
+
+                    &:hover {
+                        color: #FFF;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.button-link {
+    background: none;
+    border: none;
+    color: #000;
+    font-size: 18px;
+    cursor: pointer;
+
+    &:hover {
+        color: #FFF;
+    }
+}
