@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { logoutUser } from "../actions/auth";
 import Header from './Header';
+import Tasks from './tasks/Tasks';
 
 class Home extends Component {
   handleLogout = () => {
@@ -13,6 +14,7 @@ class Home extends Component {
     return (
       <div>
           <Header/>
+          <Tasks/>
       </div>
     );
   }
