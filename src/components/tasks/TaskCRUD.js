@@ -1,5 +1,5 @@
 import { Component } from "react";
-import { admin, auth } from 'firebase-admin';
+import { verifyAuth } from '../../actions/auth';
 import uuid from 'uuid/v4';
 
 export default class Task extends Component {
@@ -7,9 +7,7 @@ export default class Task extends Component {
 
     constructor(props) {
         super(props);
-        this.db = admin.database();
-        this.ref = this.db.ref(this.dbName);
-
+        verifyAuth();
     }
 
     createTask(title, description, auth) {
